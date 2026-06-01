@@ -63,6 +63,9 @@ B. Image Preprocessing (Blob Mapping)Raw camera input metrics cannot be directly
 
 C. Overlap Filtering via Non-Maximum Suppression (NMS): During a single forward pass, the model frequently generates multiple overlapping candidate bounding regions around a single tracked target object. Non-Maximum Suppression (NMS) evaluates candidate regions using Intersection over Union (IoU) scores. It retains the bounding box possessing the absolute maximum local confidence score and suppresses redundant overlapping boxes, yielding clean, single-box object identification metrics.
 ```
+## Output:
+<img width="628" height="520" alt="image" src="https://github.com/user-attachments/assets/a0ee4bba-97d8-479c-b61f-7b505f0f67d9" />
+
 
 ## Result:
 The real-time object detection pipeline was successfully implemented. The application successfully interfaces with the laptop camera hardware feed, resizes frame instances to mathematical blobs, and applies object inference tracking via YOLOv4-tiny weights. It accurately displays distinct object tracks (such as person and laptop) using colored bounding coordinates on live screen view screens without processing lag, shutting down cleanly upon execution termination signals.
